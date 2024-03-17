@@ -2,8 +2,8 @@ import swaggerAutogen from 'swagger-autogen';
 
 const doc = {
    info: {
-      title: "Users API",
-      description: "Users API"
+      title: "Events API",
+      description: "Events API"
    },
    host: process.env.BASE_URL,
    schemes: ["https", "http"]

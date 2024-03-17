@@ -3,6 +3,7 @@ import cors from "cors";
 import "./loadEnvironment.mjs";
 import "express-async-errors";
 import events from "./routes/events.mjs";
+import users from "./routes/users.mjs";
 import home from "./routes/index.mjs";
 import bodyParser from "body-parser";
 
@@ -14,6 +15,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
+app.use("/users", users);
 app.use("/events", events);
 app.use("/", home);
 

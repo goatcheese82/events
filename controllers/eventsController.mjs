@@ -24,7 +24,6 @@ const createEvent = async (req, res, next) => {
       duration: req.body.duration,
       priority: req.body.priority,
       image: req.body.image,
-      birthday: req.body.birthday
    }
    const result = await db.collection('events').insertOne(event);
    res.send(result).status(204);
@@ -39,7 +38,6 @@ const updateEvent = async (req, res, next) => {
          duration: req.body.duration,
          priority: req.body.priority,
          image: req.body.image,
-         birthday: req.body.birthday
       }
    }
    const options = { returnOriginal: false }

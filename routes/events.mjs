@@ -3,13 +3,19 @@ import eventsController from "../controllers/eventsController.mjs";
 
 const router = express.Router();
 
-router.get('/', eventsController.getAllEvents);
-router.get('/:id', eventsController.getEventById);
+/*** Events Controller */
 
-router.post('/', eventsController.createEvent);
+/* Get Routes */
 
-router.patch('/:id', eventsController.updateEvent);
+router.get('/', /*#swagger.tags=["Events"]*/ eventsController.getAllEvents);
+router.get('/:id', /*#swagger.tags=["Events"]*/ eventsController.getEventById);
 
-router.delete('/:id', eventsController.deleteEvent);
+/* Post Routes */
+
+router.post('/', /*#swagger.tags=["Events"] #swagger.start='events'*/ eventsController.createEvent);
+
+router.patch('/:id', /*#swagger.tags=["Events"] */ eventsController.updateEvent);
+
+router.delete('/:id', /*#swagger.tags=["Events"]*/ eventsController.deleteEvent);
 
 export default router;
