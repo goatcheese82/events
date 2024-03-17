@@ -1,6 +1,7 @@
 import express from "express";
 import usersController from "../controllers/usersController.mjs";
 import validate from "../utilities/validation.mjs";
+import "express-async-errors";
 
 const router = express.Router();
 
