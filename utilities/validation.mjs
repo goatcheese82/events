@@ -18,10 +18,10 @@ validate.userRules = () => {
    ]
  }
 
-validate.validate = (req, res, next) => {
+validate.validate = (err, req, res, next) => {
    const errors = validationResult(req)
    if (errors.isEmpty()) {
-     return next()
+     return next(err)
    }
    const extractedErrors = []
    errors.array().map(err => extractedErrors.push({ [err.param]: err.msg }))

@@ -1,5 +1,6 @@
 import express from "express";
 import eventsController from "../controllers/eventsController.mjs";
+import utilities from "../utilities/index.mjs";
 
 const router = express.Router();
 
@@ -12,7 +13,7 @@ router.get('/:id', /*#swagger.tags=["Events"]*/ eventsController.getEventById);
 
 /* Post Routes */
 
-router.post('/', /*#swagger.tags=["Events"] #swagger.start='events'*/ eventsController.createEvent);
+router.post('/', /*#swagger.tags=["Events"] */ eventsController.createEvent);
 
 router.patch('/:id', /*#swagger.tags=["Events"] */ eventsController.updateEvent);
 

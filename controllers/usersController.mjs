@@ -18,7 +18,6 @@ const getUserById = async (req, res) => {
 }
 
 const createUser = async (req, res, next) => {
-   //#swagger.tags=['Users']
    const today = new Date().getTime();
    let bday = new Date(new Date(req.body.birthday).toJSON()).getTime()
    const age = Math.floor((today - bday) / (1000 * 60 * 60 * 24 * 365.25))
