@@ -9,8 +9,10 @@ let conn;
 
 try {
    conn = await client.connect();
+   console.log(`Connected to MongoDB ${conn.s.url}`)
 } catch(e) {
    console.error(e);
+   process.exit(1);
 }
 
 let db = conn.db("events");

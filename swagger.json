@@ -309,7 +309,7 @@
     "/events": {
       "get": {
         "tags": [
-          "events"
+          "Events"
         ],
         "description": "",
         "responses": {
@@ -322,7 +322,20 @@
     "/users": {
       "get": {
         "tags": [
-          "users"
+          "Users"
+        ],
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/auth": {
+      "get": {
+        "tags": [
+          "Auth"
         ],
         "description": "",
         "responses": {
